@@ -1,1 +1,3 @@
-# HSE_Python_Advanced
+# HSE Python Advanced
+
+## Variables, referenses and mutability
