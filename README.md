@@ -80,6 +80,14 @@ A set is an **unordered** container of **hashable** objects.
 In Python, built-in immutable objects like strings or integers are hashable while mutable containers like lists or dictionaries are
 not. Immutable containers (tuples or frozensets) are hashable if their elements are hashable.
 
+### +
+* fast search
+* remove duplicates
+
+### -
+* unordered container
+* no mutable objects
+
 A set can be created in different ways:
 ```
 set_0 = set()                                             # empty set
