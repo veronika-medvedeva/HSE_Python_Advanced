@@ -57,6 +57,16 @@ print (L2) -> [1, 2, 3, 4]
 ```
 Since L1 and L2 both refer to the same object, modifying L1 results in the same change in L2.
 
+### Create copy
+
+To create separate copy of mutable object:
+```
+import copy
+c = [1, 2, 3]
+f = copy.deepcopy(c)
+f.append(10)
+print(c) -> [1, 2, 3]
+```
 ### Sets
 
 A set is an **unordered** container of **hashable** objects.
@@ -89,6 +99,6 @@ set 9 = {
 ```
 The order of elements in the set can be random.
 ```
-print({1000, -56, 78, 9})     # {1000, 9, 78, -56}
+print({1000, -56, 78, 9}) # {1000, 9, 78, -56}
 ```
 
