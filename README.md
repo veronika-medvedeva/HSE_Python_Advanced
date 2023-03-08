@@ -56,3 +56,39 @@ L1.append(4)
 print (L2) -> [1, 2, 3, 4]
 ```
 Since L1 and L2 both refer to the same object, modifying L1 results in the same change in L2.
+
+### Sets
+
+A set is an **unordered** container of **hashable** objects.
+
+In Python, built-in immutable objects like strings or integers are hashable while mutable containers like lists or dictionaries are
+not. Immutable containers (tuples or frozensets) are hashable if their elements are hashable.
+
+A set can be created in different ways:
+```
+set_0 = set()                                             # empty set
+set_1 = {3.14, 7.07, 2.718}                               # set of float numbers
+set_2 = {1, 2.37, 'le-7'}                                 # set of objects with different types
+set_3 = set(['hello’, 'world'])                           # set from iterable object
+set_4 = set('Hello')                                      # {'H', 'e', 'l', 'o'}
+set_5 = set(range(10))                                    # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+set_6 = {x for x in [1, 6, 3, 8, 9]1}                     # set comprehension
+set_7 = {x for x in range(10) if x % 2 == 0}              # +filtration, {0, 2, 4, 6, 8}
+```
+complex filtration
+```
+set_8 = {x for x in range(20) if x % 2 == 0 and x % 3 == 0} # {0, 6, 12, 18}
+```
+for complex expressions, this formatting is preferable:
+```
+set 9 = {
+         x**2                            # expression
+         for x in range(20)              # source
+         if x % 2 == 0 and x % 3 == 0    # predicate
+         }
+```
+The order of elements in the set can be random.
+```
+print({1000, -56, 78, 9})     # {1000, 9, 78, -56}
+```
+
