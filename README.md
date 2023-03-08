@@ -33,3 +33,14 @@ print (L) -> [1, 2, 3, 4]
 
 id(L) -> 4430688016 # this is the same as before!
 ```
+
+### Making References to Values
+
+Each time we create a variable that refers to an object, a **new** object is created.
+```
+L1 = [1, 2, 3]
+L2 = [1, 2, 3]
+L1 == L2 -> True        # L1 and L2 have the same value
+
+L1 is L2 -> False       # L1 and L2 do not refer to the same object!
+```
