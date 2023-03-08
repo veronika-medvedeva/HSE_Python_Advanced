@@ -67,7 +67,13 @@ f = copy.deepcopy(c)
 f.append(10)
 print(c) -> [1, 2, 3]
 ```
-### Sets
+## Hash
+
+* **hash** function is any function that can be used to map data of arbitrary size to fixed-size values. 
+* values returned by a hash function are called **hash values**, hash codes, digests, or simply hashes. 
+* values are usually used to index a fixed-size table called a **hash table**.
+
+## Sets
 
 A set is an **unordered** container of **hashable** objects.
 
