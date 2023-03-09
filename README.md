@@ -118,18 +118,22 @@ print({1000, -56, 78, 9}) # {1000, 9, 78, -56}
 
 ### Operations with set
 
-len(s) Return the number of elements in set s (cardinality of s)
+len(s)
+* Return the number of elements in set s (cardinality of s)
 ```
 len({'hello', 'world'}) -> 2
 ```
-x in s Test x for membership in s
+x in s 
+* Test x for membership in s
 ```
 1 in {1, 2, 3} -> True
 0 in {1, 2, 3} -> False
 ```
-x not in s Test x for non-membership in s
+x not in s 
+* Test x for non-membership in s
 
-s.add(x) Add element x to the set
+s.add(x) 
+* Add element x to the set
 ```
 numbers = {7, 4, 2, 4}
 numbers.add(5)
@@ -138,11 +142,14 @@ print(numbers) -> {2, 4, 5, 7}
 numbers.update({0, 1, 2})
 print(numbers) -> {0, 1, 2, 4, 5, 7}
 ```
-s.remove(x) Remove element x from the set. Raises KeyError if x is not contained in the set
+s.remove(x) 
+* Remove element x from the set. Raises KeyError if x is not contained in the set
 
-s.discard(x) Remove element x from the set if it is present
+s.discard(x) 
+* Remove element x from the set if it is present
 
-s.pop() Remove and return an arbitrary element from the set. Raises KeyError if the set is empty
+s.pop() 
+* Remove and return an arbitrary element from the set. Raises KeyError if the set is empty
 ```
 numbers = {7, 4, 2, 4, 1, 3, 8}
 numbers.remove(4) -> ok
@@ -152,9 +159,11 @@ numbers.remove(5) -> KeyError: 5
 numbers.discard(6) -> ignore
 print(numbers) -> {2, 3, 7, 8}
 ```
-s.copy() Return a new set with a shallow copy of s
+s.copy() 
+* Return a new set with a shallow copy of s
 
-s.clear() Remove all elements from the set
+s.clear() 
+* Remove all elements from the set
 ```
 numbers.clear()
 print(len(numbers)) -> 0
