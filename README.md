@@ -176,7 +176,7 @@ print(len(numbers)) -> 0
 {1, 3, 2} == {1, 2, 1, 3, 2}  # True
 {1, 3, 2} == {1, 2}           # False
 ```
-**s<=t** s.issubset(t)
+**s<=t** and **s.issubset(t)**
 * Test whether every element in s is in t
 
 **s<t** and **s<=t** and **s!=t**
@@ -184,42 +184,42 @@ print(len(numbers)) -> 0
 ```
 {1, 2} < {1, 2, 3}            # True
 ```
-**s>=t** s.issuperset(t)
+**s>=t** and **s.issuperset(t)**
 * Test whether every element in t is in s
 
 **s>t** and **s>=t** and **s!=t**
 * Test whether s is a proper superset of t
 
-**s|t** s.union(t)
+**s|t** and **s.union(t)**
 * Return a new set with elements from s and t
 ```
 {1, 2, 3, 4} | {2, 4, 5, 6} # {1, 2, 3, 4, 5, 6}
 ```
-**s&t** s.intersection(t)
+**s&t** and **s.intersection(t)**
 * Return a new set with elements common to s and t
 ```
 {1, 2, 3, 4} & {2, 4, 5, 6}  # {2, 4}
 ```
-**s-t** s.difference(t)
+**s-t** and **s.difference(t)**
 * Return a new set with elements in s that are not in t
 ```
 {1, 2, 3, 4} - {2, 4, 5, 6}  # {1, 3}
 ```
-**s^t** s.symmetric_difference(t)
+**s^t** and **s.symmetric_difference(t)**
 * Return a new set with elements in either s or t but not both
 ```
 {1, 2, 3, 4} ^ {2, 4, 5, 6}  # {1, 3, 5, 6}
 ```
-**s|=t** s.update()
+**s|=t** and **s.update()**
 * Update s, adding elements from t
 
-**s&=t** s.intersection_update(t)
+**s&=t** and **s.intersection_update(t)**
 * Update s, keeping only elements found in it and t
 
-**s-=t** s.difference_update(t)
+**s-=t** and **s.difference_update(t)**
 * Update s, removing elements found in t
 
-**s^=t** s.symmetric_difference_update(t)
+**s^=t** and **s.symmetric_difference_update(t)**
 * Update s, keeping only elements found in either set, but not in both
 
 Note: some methods may accept multiple iterable objects (not only sets).
