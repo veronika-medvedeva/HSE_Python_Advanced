@@ -193,79 +193,38 @@ s > t s >= t and s != t
 s|t s.union(t)
 * Return a new set with elements from s and t
 ```
-{1, 2, 3, 4} | 2, 4,5, 6} #41, 2,3, 4,5, 6
+{1, 2, 3, 4} | {2, 4, 5, 6} # {1, 2, 3, 4, 5, 6}
 ```
-
 s&t s.intersection(t)
 * Return a new set with elements common to s and t
+```
+{1, 2, 3, 4} & {2, 4, 5, 6}  # {2, 4}
+```
+s-t s.difference(t)
+* Return a new set with elements in s that are not in t
+```
+{1, 2, 3, 4} - {2, 4, 5, 6}  # {1, 3}
+```
+s^t s.symmetric_difference(t)
+* Return a new set with elements in either s or t but not both
+```
+{1, 2, 3, 4} ^ {2, 4, 5, 6}  # {1, 3, 5, 6}
+```
+s|=t s.update()
+* Update s, adding elements from t
 
-sot s.difference(t)
+s&=t s.intersection_update(t)
+* Update s, keeping only elements found in it and t
 
-sat s.symmetric_difference(t)
-s)=t s.update()
+s-=t s.difference_update(t)
+* Update s, removing elements found in t
 
-sat s.ntersection_update(t)
-st s.difference_update(t)
-sh=t s.symmetric_difference_update(t)
+s^=t s.symmetric_difference_update(t)
+* Update s, keeping only elements found in either set, but not in both
 
-1,2, 1,3, 2} #True
-11, 3, 2} = {1, 2} # False
-
-
-1
-2
-
-3
-
-4
-
-5 # operator <
-6
-
-7
-
-8 # operator |
-9
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Return a new set with elements in sthat are not in ¢
-Return a new set with elements in either sor but not both
-Update 5, adding elements from ¢
-
-Update 5, keeping only elements found in it and
-
-Update 5, removing elements found in ¢
-
-Update s, keeping only elements found in either set, but not in both
-
-
-
-11 # operator &
-241,23, 46142, 4,5 6 #12, 4
-
-14 # operator -
-1541, 2,3, 4-142, 4,5, 6} #{1, 3}
-
-17 # operator ~
-
-18 41, 2,3, 4°42, 4,5 6} #41, 3,5, 6
-
-+ Note: some methods may accept multiple iterable objects (not only sets).
-
-s=41, 2}
-
-t= s.union((3, 4), [5, 61, {7, 8, 9)
-print(t) #41, 2,3, 4,5, 6,7, 8 9
-
+Note: some methods may accept multiple iterable objects (not only sets).
+```
+s = {1, 2}
+t = s.union((3, 4), [5, 6] , {7, 8, 9})
+print(t) # {1, 2, 3, 4, 5, 6, 7, 8, 9}
+```
