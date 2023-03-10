@@ -168,3 +168,104 @@ s.clear()
 numbers.clear()
 print(len(numbers)) -> 0
 ```
+### Operations with two sets
+
+s == t
+* Test sets to equality
+```
+{1, 3, 2} == {1, 2, 1, 3, 2}  # True
+{1, 3, 2} == {1, 2}           # False
+```
+s <= t s.issubset(t)
+* Test whether every element in s is in t
+
+s < t s <= t and s != t
+* Test whether s is a proper subset of t
+```
+{1, 2} < {1, 2, 3}            # True
+```
+s >= t s.issuperset(t)
+* Test whether every element in t is in s
+
+s > t s >= t and s != t
+* Test whether s is a proper superset of t
+
+s|t s.union(t)
+* Return a new set with elements from s and t
+```
+{1, 2, 3, 4} | 2, 4,5, 6} #41, 2,3, 4,5, 6
+```
+
+s&t s.intersection(t)
+* Return a new set with elements common to s and t
+
+sot s.difference(t)
+
+sat s.symmetric_difference(t)
+s)=t s.update()
+
+sat s.ntersection_update(t)
+st s.difference_update(t)
+sh=t s.symmetric_difference_update(t)
+
+1,2, 1,3, 2} #True
+11, 3, 2} = {1, 2} # False
+
+
+1
+2
+
+3
+
+4
+
+5 # operator <
+6
+
+7
+
+8 # operator |
+9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Return a new set with elements in sthat are not in ¢
+Return a new set with elements in either sor but not both
+Update 5, adding elements from ¢
+
+Update 5, keeping only elements found in it and
+
+Update 5, removing elements found in ¢
+
+Update s, keeping only elements found in either set, but not in both
+
+
+
+11 # operator &
+241,23, 46142, 4,5 6 #12, 4
+
+14 # operator -
+1541, 2,3, 4-142, 4,5, 6} #{1, 3}
+
+17 # operator ~
+
+18 41, 2,3, 4°42, 4,5 6} #41, 3,5, 6
+
++ Note: some methods may accept multiple iterable objects (not only sets).
+
+s=41, 2}
+
+t= s.union((3, 4), [5, 61, {7, 8, 9)
+print(t) #41, 2,3, 4,5, 6,7, 8 9
+
