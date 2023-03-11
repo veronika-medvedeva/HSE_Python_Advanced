@@ -264,5 +264,38 @@ dict_5 ={
          if counts[i] > 1
          }
 ```
+### Operations with dict:
 
+**len(d)**
+* Return the number of items in the dictionary d
 
+**key in d**
+* Return True if d has a key, else False
+
+**del d[key]**
+* Remove d[key] from d. Raises a KeyError if key is not in the dict
+
+**d.pop(key[, default])**
+* If keyis in the dictionary, remove it and return its value, else return default. If default is not given and key is not in the dictionary, a KeyError is raised
+
+**d.clear()**
+* Remove all items from the dictionary d
+
+**d.copy()**
+* Return a shallow copy of the dictionary d
+
+Iterate through a dictionary:
+
+keys
+```
+for key in d: pass
+for key in d.keys(): pass
+```
+values
+```
+for value in d.values(): pass
+```
+pairs of key and value
+```
+for key, value in d.items(): pass
+```
