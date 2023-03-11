@@ -233,23 +233,29 @@ print(t) # {1, 2, 3, 4, 5, 6, 7, 8, 9}
 A **dictionary** is used to store a mapping from one set of objects to another. An entry in a dictionary consists of a key and its associated value. Values can be any type of object, but keys must be hashable.
 
 A **dict** can be created in different ways:
+
+empty dict
 ```
-# empty dict
 dict_0 = dict()
-
-# standard initialization
+```
+standard initialization
+```
 dict_1 = {'USA': 2, 'France': 2, 'Germany': 1}
-
-# from list of tuples
+```
+from list of tuples
+```
 dict_2 = dict([('USA', 2), ('France', 2), ('Germany', 1)])
-
-# from mix of lists and tuples
+```
+from mix of lists and tuples
+```
 dict_3 = dict((('USA', 2), ('France', 2), ['Germany', 1]))
-
-# this is correct too
+```
+this is correct too
+```
 dict_4 = dict(USA=2, France=2, Germany=1)
-
-# dict comprehension
+```
+dict comprehension
+```
 countries = ['USA', 'France', 'Germany']
 counts = [2, 2, 1]
 dict_5 ={
@@ -257,7 +263,6 @@ dict_5 ={
          for i in range(len(countries))
          if counts[i] > 1
          }
-
 ```
 
 
