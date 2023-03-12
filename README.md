@@ -299,3 +299,13 @@ pairs of key and value
 ```
 for key, value in d.items(): pass
 ```
+### Dictionaries - extra methods
+
+**get(key [, default])**
+* Return the value for key if key is in the dictionary, else default. If default is not given, it defaults to None, so that this method never raises a KeyError.
+
+**update([other])**
+* Update the dictionary with the key/value pairs from other, overwriting existing keys. Return None
+
+**setdefault(key[, default])**
+* If key is in the dictionary, return its value. If not, insert key with a value of default and return default, default defaults to None.
