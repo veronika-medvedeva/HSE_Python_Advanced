@@ -307,5 +307,5 @@ for key, value in d.items(): pass
 **update([other])**
 * Update the dictionary with the key/value pairs from other, overwriting existing keys. Return None
 
-**setdefault(key[, default])**
+**setdefault(key [, default])**
 * If key is in the dictionary, return its value. If not, insert key with a value of default and return default, default defaults to None.
