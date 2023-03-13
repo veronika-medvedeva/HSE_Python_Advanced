@@ -344,7 +344,7 @@ comparisons.
 For example, here's a case-insensitive string comparison:
 ```
 sorted("This is a test string from Andrew".split(), key=str.lower) 
-    -> ['a', 'Andrew', 'from', 'is', ‘string’, 'test', 'This']
+-> ['a', 'Andrew', 'from', 'is', ‘string’, 'test', 'This']
 ```
 The value of the key parameter should be a function that takes a single argument and returns a key to use for sorting purposes.
 This technique is fast because the key function is called exactly once for each input record.
@@ -358,5 +358,25 @@ student_tuples = [
 ('dave', 'B', 10),
 
 sorted(student_tuples, key=lambda student: student[2]) # sort by age
-    -> ('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+-> ('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+```
+### Operator Module Function
+
+The key-function patterns shown above are very common, so Python provides convenience functions to make accessor functions easier and faster. The operator module has **itemgetter()** function.
+```
+from operator import itemgetter
+sorted (student_tuples, key=itemgetter(2))
+-> [('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+```
+The operator module function allow multiple levels of sorting. For example, to sort by grade then by age:
+```
+sorted (student_tuples, key=itemgetter(1, 2))
+-> [('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]
+```
+#### Ascending and Descending
+
+Both list.sort() and sorted() accept a reverse parameter with a boolean value. This is used to flag descending sorts. For example, to get the student data in reverse age order:
+```
+sorted (student_tuples, key=itemgetter(2), reverse=True)
+-> [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
 ```
