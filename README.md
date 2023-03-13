@@ -2,6 +2,9 @@
 
 * [Variables, referenses and mutability](#variables-references-and-mutability)
 * [Hash](#hash)
+* [Sets](#sets)
+* [Dictionaries](#dictionaries)
+* [Sorting](#sorting)
 
 ## Variables, referenses and mutability
 
