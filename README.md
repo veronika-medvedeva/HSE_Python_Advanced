@@ -1,6 +1,7 @@
 # HSE Python Advanced
 
 * [Variables, referenses and mutability](#variables-references-and-mutability)
+* [Hash](#hash)
 
 ## Variables, referenses and mutability
 
