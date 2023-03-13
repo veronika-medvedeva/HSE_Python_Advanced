@@ -1,5 +1,7 @@
 # HSE Python Advanced
 
+* [Variables, referenses and mutability](#variables-references-and-mutability)
+
 ## Variables, referenses and mutability
 
 ### Mutable vs. Immutable Objects
