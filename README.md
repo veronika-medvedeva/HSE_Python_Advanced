@@ -330,3 +330,27 @@ Another difference is that the list.sort() method is only defined for lists. In 
 ```
 sorted({1: 'D', 2: 'B', 3: 'B', 4: 'E', 5: 'A'}) -> [1, 2, 3, 4, 5]
 ```
+### Key Functions
+
+Both list.sort() and sorted() have a key parameter to specify a function to be called on each list element prior to making
+comparisons.
+
+For example, here's a case-insensitive string comparison:
+```
+sorted("This is a test string from Andrew".split(), key=str.lower) 
+    -> ['a', 'Andrew', 'from', 'is', ‘string’, 'test', 'This']
+```
+The value of the key parameter should be a function that takes a single argument and returns a key to use for sorting purposes.
+This technique is fast because the key function is called exactly once for each input record.
+
+A common pattern is to sort complex objects using some of the object's indices as keys. For example:
+```
+student_tuples = [
+# (name, grade, age)
+('john', 'A', 15),
+('jane', 'B', 12),
+('dave', 'B', 10),
+
+sorted(student_tuples, key=lambda student: student[2]) # sort by age
+    -> ('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]
+```
