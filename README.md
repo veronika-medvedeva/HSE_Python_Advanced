@@ -380,3 +380,11 @@ Both list.sort() and sorted() accept a reverse parameter with a boolean value. T
 sorted (student_tuples, key=itemgetter(2), reverse=True)
 -> [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
 ```
+### Sort Stability
+
+Sorts are guaranteed to be stable. That means that when multiple records have the same key, their original order is preserved.
+```
+data = [('red', 1), ('blue', 2), ('red', 2), ('blue', 1)]
+sorted(data, key=itemgetter(0))
+-> [('blue', 2), ('blue', 1), ('red', 1), ('red', 2)]
+```
